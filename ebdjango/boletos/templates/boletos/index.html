@@ -1,0 +1,279 @@
+{% extends 'boletos/base.html'%}
+
+{% block body %}
+
+<div class=" col-md-12 jumbotron">
+  <h1>Boletos Wizard Beta</h1>
+  <p>Work in progress</p>
+</div>
+
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form action="numbers" method="GET">
+                <div class="row">
+                    
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                            <label for="name">
+                                Lista de Boletos</label>
+                            <textarea name="numbersList" id="numbersL" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Lista de boletos separada por comas ej: 123456, 123457, 123458"></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit"   class="btn btn-primary pull-right" id="btnCalcular">
+                                Calcular</button>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                        <label for="name">Analisis</label>
+                        
+                        </div>
+                        Cada boleto se evaluo usando 3 criterios basados en un analisis numerico de los boletos ganadores del 2017
+                        <br>
+                        <br>
+
+                        <ul>
+                            <li>Distribucion por rango</li>
+                            <li>Repeticiones por digito</li>
+                            <li>Frecuencia de digitos consecutivos</li>
+                        </ul>
+                        <br>
+                        El Maximo score asignado es 5
+
+                    </div>
+                    <div class="col-sm-4">
+                            <div class="form-group">
+                                <label for="name">Top 50 Boletos</label>
+                            </div>
+                            
+                            <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Boleto</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                    <td>1</td>
+                                                    <td>012569</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>2</td>
+                                                    <td>012596</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>3</td>
+                                                    <td>012659</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>4</td>
+                                                    <td>012695</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>5</td>
+                                                    <td>012956</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>6</td>
+                                                    <td>012965</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>7</td>
+                                                    <td>015269</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>8</td>
+                                                    <td>015296</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>9</td>
+                                                    <td>015629</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>10</td>
+                                                    <td>015692</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>11</td>
+                                                    <td>015926</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>12</td>
+                                                    <td>015962</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>13</td>
+                                                    <td>016259</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>14</td>
+                                                    <td>016295</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>15</td>
+                                                    <td>016529</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>16</td>
+                                                    <td>016592</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>17</td>
+                                                    <td>016925</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>18</td>
+                                                    <td>016952</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>19</td>
+                                                    <td>019256</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>20</td>
+                                                    <td>019265</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>21</td>
+                                                    <td>019526</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>22</td>
+                                                    <td>019562</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>23</td>
+                                                    <td>019625</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>24</td>
+                                                    <td>019652</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>25</td>
+                                                    <td>021569</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>26</td>
+                                                    <td>021596</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>27</td>
+                                                    <td>021659</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>28</td>
+                                                    <td>021695</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>29</td>
+                                                    <td>021956</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>30</td>
+                                                    <td>021965</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>31</td>
+                                                    <td>025169</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>32</td>
+                                                    <td>025196</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>33</td>
+                                                    <td>025619</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>34</td>
+                                                    <td>025691</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>35</td>
+                                                    <td>025916</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>36</td>
+                                                    <td>025961</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>37</td>
+                                                    <td>026159</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>38</td>
+                                                    <td>026195</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>39</td>
+                                                    <td>026519</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>40</td>
+                                                    <td>026591</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>41</td>
+                                                    <td>026915</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>42</td>
+                                                    <td>026951</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>43</td>
+                                                    <td>012356</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>44</td>
+                                                    <td>012365</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>45</td>
+                                                    <td>012369</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>46</td>
+                                                    <td>012396</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>47</td>
+                                                    <td>012536</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>48</td>
+                                                    <td>012563</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>49</td>
+                                                    <td>012635</td>
+                                                    </tr>
+                                                    <tr>
+                                                    <td>50</td>
+                                                    <td>012639</td>
+                                                    </tr>
+                                                                                                    
+                                        
+                                    </tbody>
+                            </table>
+
+                    </div>
+
+                    
+                </div>
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+{% endblock %}

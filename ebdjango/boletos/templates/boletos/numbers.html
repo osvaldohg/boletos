@@ -1,0 +1,58 @@
+{% extends 'boletos/base.html'%}
+
+{% block body %}
+
+<div class=" col-md-12 jumbotron">
+  <h1>Results</h1>
+  <p>Beta version</p>
+</div>
+
+
+  <div class="row">
+      <div class="col-md-8">
+            <div class="well well-sm">
+                <div class="row">
+                <div class="col-md-6">
+                
+                    <div class="form-group">
+                        <label for="name">
+                            Resultados
+                        </label>
+                        
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Boleto</th>
+                                        <th>Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for field in info %}
+                                    <tr>
+                                        {% for val in field%}
+                                            <td>{{val}}</td>
+                                        {% endfor %}
+                                          
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        <a href="{% url 'boletos:index' %}" class="btn btn-success" role="button">Intentar de nuevo</a>                       
+                    </div>
+                </div>
+                </div>    
+            </div>
+      </div>
+      <div class='col-md-8'>
+        <h3> 
+            Status: {{ output }} 
+        </h3>
+      </div>
+      
+  </div>
+
+
+
+
+
+{% endblock %}
